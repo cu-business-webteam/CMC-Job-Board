@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Executive MBA Careers Networking Database</title>
+        <!-- uncomment for different "mobile" view 
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        -->
+        <script src="https://tableau.cornell.edu/javascripts/api/tableau-2.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var containerDiv = document.getElementById("vizContainer");
+                var url = "https://tableau.cornell.edu/t/PublicContent/views/EMBADashboard/EMBAEmploymentDashboard?%3Aembed=y&%3Aiid=8&%3AisGuestRedirectFromVizportal=y";
+            
+                var viz = new tableau.Viz(containerDiv, url, { hideToolbar: true });
+            });
+        </script>
+        <style type="text/css">
+            #vizContainer {
+                position: absolute;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="vizContainer"></div>
+    </body>
+</html>
